@@ -3,9 +3,17 @@
 // GetScheduleTrainerPage.jsx
 
 import React, { useEffect, useState } from 'react';
+interface TrainerHelper {
+  id: number;
+  trainer: number;
+  client: number;
+  date: string;
+  time: string;
+  description: string;
+}
 
 const getAllSchedulesPage = () => {
-  const [schedules, setSchedules] = useState([]);
+  const [schedules, setSchedules] = useState<TrainerHelper[]>([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {

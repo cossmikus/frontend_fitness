@@ -4,8 +4,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+interface TrainerInfo {
+    trainer_id: number;
+    name: string;
+    email: string;
+  }
 const GetTrainerInfoPage = () => {
-  const [trainersInfo, setTrainersInfo] = useState([]);
+  const [trainersInfo, setTrainersInfo] = useState<TrainerInfo[]>([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {

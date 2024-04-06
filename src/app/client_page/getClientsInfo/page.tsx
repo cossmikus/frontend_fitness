@@ -3,9 +3,13 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+interface TrainerHelper {
+  id: number;
+  name: string;
+  email: string;
+}
 const GetClientsInfoPage = () => {
-  const [clientsInfo, setClientsInfo] = useState([]);
+  const [clientsInfo, setClientsInfo] = useState<TrainerHelper[]>([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
