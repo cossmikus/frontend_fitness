@@ -44,7 +44,7 @@ const Home = () => {
           window.location.href = '/admin_page';
           break;
         default:
-          window.location.href = '/maint_page';
+          window.location.href = '/';
           break;
       }
     } catch (error) {
