@@ -62,7 +62,6 @@ const Home = () => {
 
           <p className="text-md mt-4">для тренера(email: trainer@gmail.com, password: trainer)</p>
           <p className="text-md mt-4">для клиента(email: client@gmail.com, password: client)</p>
-          <p className="text-md mt-4">Client and Trainer pages cofigured</p>
 
         </div>
         <div className="bg-white p-8 rounded shadow-md">
