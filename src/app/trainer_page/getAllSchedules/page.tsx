@@ -23,7 +23,6 @@ const getAllSchedulesPage = () => {
         const data = await response.json();
         setSchedules(data);
       } catch (error) {
-        setError('Error fetching schedule');
         console.error('Error fetching schedule:', error);
       }
     };

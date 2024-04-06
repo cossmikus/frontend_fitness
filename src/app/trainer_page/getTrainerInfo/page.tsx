@@ -26,7 +26,6 @@ const GetTrainerInfoPage = () => {
         const response = await axios.get('https://fitnessheroku-2b7e0fea23b9.herokuapp.com/users/getTrainerInfo', config);
         setTrainersInfo(response.data);
       } catch (error) {
-        setError('Error fetching trainers info');
       }
     };
 

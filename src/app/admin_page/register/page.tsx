@@ -13,7 +13,7 @@ const RegisterPage = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     try {
       setLoading(true);
@@ -37,7 +37,7 @@ const RegisterPage = () => {
     }
   };
 
-  const handleChange = (event) => {
+  const handleChange = (event: { target: { name: any; value: any; }; }) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 

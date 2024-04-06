@@ -14,7 +14,6 @@ const GetClientsInfoPage = () => {
         const response = await axios.get('https://fitnessheroku-2b7e0fea23b9.herokuapp.com/users/getClientsInfo');
         setClientsInfo(response.data);
       } catch (error) {
-        setError('Error fetching clients info');
         console.error('Error fetching clients info:', error);
       }
     };

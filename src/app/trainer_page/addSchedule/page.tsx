@@ -12,7 +12,7 @@ const AddSchedulePage = () => {
     description: ''
   });
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     try {
       // Retrieve the trainer's ID from localStorage
@@ -35,7 +35,7 @@ const AddSchedulePage = () => {
     }
   };
 
-  const handleChange = (event) => {
+  const handleChange = (event: { target: { name: any; value: any; }; }) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
